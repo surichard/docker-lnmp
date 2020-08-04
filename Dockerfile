@@ -10,7 +10,7 @@ RUN echo "~~~开始安装依赖~~~" \
     && yum install -y wget \
     && echo "~~~获取lnmp.org  1.7安装包~~~" \
     && wget http://soft.vpszt.com/lnmp/lnmp1.7-full.tar.gz -cO lnmp1.7-full.tar.gz \
-    && tar zxf /tmp/lnmp1.7.tar.gz -C /home \
+    && tar zxf /tmp/lnmp1.7-full.tar.gz -C /home \
     && cd /home/lnmp1.7-full \    
     && echo "~~~喝杯咖啡稍等片刻...开始安装lnmp.org包~~~" \
     && echo "~~~设置安装参数：数据库Mysql5.7，PHP版本5.6，内存分配器不安装~~~" \
