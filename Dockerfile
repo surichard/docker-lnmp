@@ -9,7 +9,7 @@ FROM centos:${CENTOS_VERSION}
 RUN echo "~~~开始安装依赖~~~" \
     && yum install -y wget \
     && echo "~~~获取lnmp.org  1.7安装包~~~" \
-    && wget http://soft.vpszt.com/lnmp/lnmp1.7-full.tar.gz -cO /tmp/lnmp1.7-full.tar.gz \
+    && wget http://soft2.vpser.net/lnmp/lnmp1.7-full.tar.gz -cO /tmp/lnmp1.7-full.tar.gz \
     && tar zxf /tmp/lnmp1.7-full.tar.gz -C /home \
     && cd /home/lnmp1.7-full \    
     && echo "~~~喝杯咖啡稍等片刻...开始安装lnmp.org包~~~" \
