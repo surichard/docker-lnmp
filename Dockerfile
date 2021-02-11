@@ -17,7 +17,7 @@ RUN echo "~~~开始安装依赖~~~" \
     && echo "~~~喝杯咖啡稍等片刻...开始安装lnmp.org包~~~" \
     && echo "~~~设置安装参数：数据库Mysql5.7，PHP版本5.6，内存分配器不安装~~~" \
     # 设置无人值守安装参数：Mysql5.7，php安装版本5.6 开始安装
-    && LNMP_Auto="y" DBSelect="4" DB_Root_Password="P@sswd3421903490" InstallInnodb="y" PHPSelect="5" SelectMalloc="1" CheckMirror="n" ./install.sh lnmp \
+    && LNMP_Auto="y" DBSelect="0" PHPSelect="5" SelectMalloc="1" CheckMirror="n" ./install.sh lnmp \
     && echo "~~~清理下载包~~~" \
     && rm -rf /tmp/lnmp1.7.tar.gz \
     && yum clean all
