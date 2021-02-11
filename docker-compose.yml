@@ -13,6 +13,7 @@ services:
       - ${NGINX_CONF_VHOST_DIR}:/usr/local/nginx/conf/vhost:rw
       - ${NGINX_LOG_DIR}:/home/wwwlogs/:rw
       - ${PHP_FPM_CONF_FILE}:/usr/local/php/etc/php-fpm.conf:rw
+    privileged: true
     links:
       - mysql:mysql
     networks:
@@ -22,6 +23,7 @@ services:
     image: mysql:${MYSQL_VERSION}
     ports:
       - "${MYSQL_HOST_PORT}:3306"
+    privileged: true
     volumes:
       # - ${MYSQL_CONF_FILE}:/etc/mysql/conf.d/mysql.cnf:ro
       - ${MYSQL_DATA_DIR}:/var/lib/mysql/:rw
